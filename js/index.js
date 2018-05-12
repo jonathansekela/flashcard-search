@@ -6,6 +6,7 @@ Shenzhen 12 Flashcard search database
 
 Library dependencies:
 > jQuery
+> csv-utility.js
 
 **********************************************************/
 
@@ -13,10 +14,14 @@ $(document).ready(initialDisplay());
 //===============================================
 
 // DESC:
-// PRECONDITION: html page is properly setup and started
+// PRECONDITION:  html page is properly setup and started
 // POSTCONDITION: #db div contains formatted table of all
 //  EF flashcards sorted by card number
 function initialDisplay() {
+    var url = "docs/ef-fc-db-stringReadable.csv";
+    var csvStr = CSVfileToString(url);
+    // display table at #db
+    displayTable(csvStr, $("#db"));
 
 }
 //===============================================
@@ -35,11 +40,12 @@ function getTableString(loc) {
     })
 }
 
-// DESC: Function to display table in #db div
-// PRECONDITION: data contains csv-format string
-// POSTCONDITION: #db contains a formatted table of
+// DESC: Function to display table in designated html tag
+// PRECONDITION:  data contains csv-format string
+//                htmlLoc is a valid jQuery location on the current page
+// POSTCONDITION: htmlLoc contains a formatted table of
 //  data's contents
-function displayTable(data) {
+function displayTable(data, htmlLoc) {
     var result = "<table>";
     let i = 0;
     while (i < data.length) {
@@ -61,24 +67,17 @@ function displayTable(data) {
         i++; // add 1 to i every newline
     }
     result += "</table>";
-    $("#db").html(result);
+    htmlLoc.html(result);
 }
 //===============================================
 
 // DESC: Function to find all relevant flashcards
-// PRECONDITION: condition contains JSON-encoded list of 
+// PRECONDITION:  condition contains JSON-encoded list of 
 //  requirements
 // POSTCONDITION: returns csv-format string containing
 //  all relevant results
 function search(condition) {
-    $.get({
-        url: "docs/ef-fc-db.csv",
-        dataType: "text",
-        success: function(data) {
-            // search logic here
-        },
-        error: function(xhr, status, error) {
-            alert(error+'\n'+info);
-        }
-    })
+    var url = "docs/ef-fc-db-stringReadable.csv";
+    var books = CSVfileToArray(url);
+    // @TODO: start search logic
 }
