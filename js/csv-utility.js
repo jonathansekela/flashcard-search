@@ -3,10 +3,12 @@
 Creator: Jonathan Sekela
 CSV-related utility functions
 
+Library dependencies:
+> jQuery
+
 ***********************/
 
-// jQuery required
-// PRECONDITION:  file is an accessible url to a .csv file
+// PRECONDITION:  file is a client-side accessible url to a .csv file
 // POSTCONDITION: returns string containing file as-is
 function CSVfileToString(file) {
     $.get({

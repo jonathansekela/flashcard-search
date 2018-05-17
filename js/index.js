@@ -20,6 +20,7 @@ $(document).ready(initialDisplay());
 function initialDisplay() {
     var url = "docs/ef-fc-db-stringReadable.csv";
     var csvStr = CSVfileToString(url);
+    alert(csvStr);
     // display table at #db
     displayTable(csvStr, $("#db"));
 

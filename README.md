@@ -14,5 +14,3 @@ This app will help EF teachers more easily find cards for classes based on card 
     * Eventually by lesson - _will require tedious amounts of digging through the teacher notes_
 4. Results In a table, easily read
 5. reset button
-
-###### _Copyright (c) Jonathan 2018_
