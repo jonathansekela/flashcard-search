@@ -6,6 +6,8 @@ CSV-related utility functions
 Library dependencies:
 > jQuery
 
+======== IMPORTANT: DELETE THIS ONCE DATABASE CLASS WORKS =========
+
 ***********************/
 
 // PRECONDITION:  file is a client-side accessible url to a .csv file
@@ -15,14 +17,18 @@ function CSVfileToString(file) {
         url: file,
         dataType: "text",
         success: function(result) {
-        	// @TODO: add error-checking to make sure it's a csv file
-        	return result;
+        	// wrap return inside a promise to prevent display of empty variable
+        	return new Promise((resolve, reject) => {
+				// @TODO: add error-checking to make sure it's a csv file
+        		resolve(result);
+        	})
         },
         failure: function(xhr, status, error) {
             alert("csv-utility fileToString(): " + xhr + " ||| " + status + " ||| " + error);
         }
     })
 }
+//=======
 
 // PRECONDITION:  csv is an appropriately-constructed string
 // POSTCONDITION: result is a 2D array parsed by '\n' and ','
@@ -35,10 +41,12 @@ function CSVstringToArray(csv) {
 	}
 	return result;
 }
+//=======
 
 function CSVfileToArray(file) {
 	return CSVstringToArray(CSVfileToString(file));
 }
+//=======
 
 // PRECONDITION:  csv is an appropriately-constructed string
 //					csv is 2-column, key->value

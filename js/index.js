@@ -6,7 +6,7 @@ Shenzhen 12 Flashcard search database
 
 Library dependencies:
 > jQuery
-> csv-utility.js
+> FlashcardDatabaseClass.js
 
 **********************************************************/
 
@@ -19,10 +19,9 @@ $(document).ready(initialDisplay());
 //  EF flashcards sorted by card number
 function initialDisplay() {
     var url = "docs/ef-fc-db-stringReadable.csv";
-    var csvStr = CSVfileToString(url);
-    alert(csvStr);
-    // display table at #db
-    displayTable(csvStr, $("#db"));
+    const SmallStarsFCs = new FlashcardDatabase(url);
+
+    displayTable(SmallStarsFCs.cardString,$("#card-display"));
 
 }
 //===============================================
@@ -51,14 +50,12 @@ function displayTable(data, htmlLoc) {
     let i = 0;
     while (i < data.length) {
         result += "<tr>";
-        while (isalpha(data[i])
-            || isspace(data[i])
-            && !isnewline(data[i])
-        ) {
+        while (!isnewline(data[i])) {
             result += "<td>";
             while (data[i] !== ','
-            && !isnewline(data[i])) // create table columns until comma
-                result += (data[i++]); // add result, increment i
+                && !isnewline(data[i])) { // create table columns until comma
+                result += (data[i++]); // add to result, increment i
+            }
 
             result += "</td>";
             if (data[i] === ',')
@@ -69,16 +66,4 @@ function displayTable(data, htmlLoc) {
     }
     result += "</table>";
     htmlLoc.html(result);
-}
-//===============================================
-
-// DESC: Function to find all relevant flashcards
-// PRECONDITION:  condition contains JSON-encoded list of 
-//  requirements
-// POSTCONDITION: returns csv-format string containing
-//  all relevant results
-function search(condition) {
-    var url = "docs/ef-fc-db-stringReadable.csv";
-    var books = CSVfileToArray(url);
-    // @TODO: start search logic
 }
