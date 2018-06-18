@@ -19,10 +19,10 @@ $(document).ready(initialDisplay());
 //  EF flashcards sorted by card number
 function initialDisplay() {
     var url = "docs/ef-fc-db-stringReadable.csv";
-    var csvStr = CSVfileToString(url);
-    alert(csvStr);
+    // CSVfileToString() returns a promise
+    const promise = CSVfileToString(url);
     // display table at #db
-    displayTable(csvStr, $("#db"));
+    promise.then(displayTable(),alert());
 
 }
 //===============================================
