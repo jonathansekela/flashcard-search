@@ -17,6 +17,8 @@ class FlashcardDatabase
 	}
 	//=======
 
+	// PRECONDITION:  loc is a client-side accessible url to a .csv file
+	// POSTCONDITION: returns string containing file as-is
 	fileToString(loc) {
 	    $.get({
 	        url: loc,
@@ -41,6 +43,8 @@ class FlashcardDatabase
 	}
 	//=======
 	
+	// PRECONDITION:  csv is an appropriately-constructed string
+	// POSTCONDITION: result is a 2D array parsed by '\n' and ','
 	stringToArray(csv) {
 		// @TODO: add error-checking for 2D
 		var csvLines = csv.split("\n");
@@ -52,6 +56,9 @@ class FlashcardDatabase
 	}
 	//=======
 
+	// PRECONDITION:  csv is an appropriately-constructed string
+	//					csv is 2-column, key->value
+	// POSTCONDITION: result is a dict containing csv values
 	stringToDict(csv) {
 		var csvLines = csv.split("\n");
 		var temp = new Array();
