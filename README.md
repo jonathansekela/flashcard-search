@@ -16,6 +16,7 @@ This app will help EF teachers more easily find cards for classes based on card 
 5. reset button
 
 #### change-log
+- 2018/06/29: added setter functions and EcmaScript syntax, changed the class layout
 - 2018/06/28: added search form to index.html
 	- Current options: class, unit, lesson
 - 2018/06/18: started FlashcardDatabase class construction

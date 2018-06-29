@@ -18,27 +18,15 @@ $(document).ready(initialDisplay());
 // POSTCONDITION: #db div contains formatted table of all
 //  EF flashcards sorted by card number
 function initialDisplay() {
+    console.log("initialDisplay called. creating SmallStarsFCs object...");
     var url = "docs/ef-fc-db-stringReadable.csv";
-    const SmallStarsFCs = new FlashcardDatabase(url);
+    var SmallStarsFCs = FlashcardDatabase(url);
+    console.log("SmallStarsFCs object creation successful!! Displaying current FC table...")
 
     displayTable(SmallStarsFCs.cardString,$("#card-display"));
 
 }
-//===============================================
-
-// Takes a location to a .csv file, returns a string
-function getTableString(loc) {
-    $.get({
-        url: loc,
-        dataType: 'text',
-        success: function(data) {
-            return data;
-        },
-        error: function(xhr, status, error) {
-            alert(xhr+' ||| '+status+' ||| '+error);
-        }
-    })
-}
+//=======
 
 // DESC: Function to display table in designated html tag
 // PRECONDITION:  data contains csv-format string
