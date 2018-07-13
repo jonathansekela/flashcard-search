@@ -19,7 +19,7 @@ $(document).ready(initialDisplay());
 //  EF flashcards sorted by card number
 function initialDisplay() {
     console.log("initial display called...");
-    displayTable(fileToString());
+    fileToString(displayTable);
 }
 //=======
 

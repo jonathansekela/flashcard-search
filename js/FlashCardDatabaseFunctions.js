@@ -10,7 +10,7 @@ Library dependencies:
 
 
 var csvLoc = "docs/ef-fc-db-stringReadable.csv";
-var fileToString = () => {
+var fileToString = (callback) => {
 	console.log("fileToString called. generating AJAX request...");
     $.get({
         url: csvLoc,
@@ -18,7 +18,7 @@ var fileToString = () => {
         success: function(result) {
         	console.log("AJAX request successful. result: ");
         	console.log(result);
-        	return result;
+        	callback(result);
         },
         failure: function(xhr, status, error) {
             console.log("ERROR: fileToString(): " + xhr + " ||| " + status + " ||| " + error);

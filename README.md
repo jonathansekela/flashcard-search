@@ -17,6 +17,7 @@ This app will help EF teachers more easily find cards for classes based on card 
 
 #### change-log
 - 2018/07/13: changed js to functional instead of object-oriented for simplicity's sake; added A LOT of console.log
+   - CURRENT PROBLEM: there seems to be an infinite loop in either displayTable or one of the FlashCardDatabaseFunctions.js functions.
 - 2018/06/29: added setter functions and EcmaScript syntax, changed the class layout
 - 2018/06/28: added search form to index.html
 	- Current options: class, unit, lesson
