@@ -18,13 +18,8 @@ $(document).ready(initialDisplay());
 // POSTCONDITION: #db div contains formatted table of all
 //  EF flashcards sorted by card number
 function initialDisplay() {
-    console.log("initialDisplay called. creating SmallStarsFCs object...");
-    var url = "docs/ef-fc-db-stringReadable.csv";
-    var SmallStarsFCs = FlashcardDatabase(url);
-    console.log("SmallStarsFCs object creation successful!! Displaying current FC table...")
-
-    displayTable(SmallStarsFCs.cardString,$("#card-display"));
-
+    console.log("initial display called...");
+    displayTable(fileToString());
 }
 //=======
 
@@ -33,7 +28,7 @@ function initialDisplay() {
 //                htmlLoc is a valid jQuery location on the current page
 // POSTCONDITION: htmlLoc contains a formatted table of
 //  data's contents
-function displayTable(data, htmlLoc) {
+function displayTable(data, htmlLoc = $("#card-display")) {
     var result = "<table>";
     let i = 0;
     while (i < data.length) {

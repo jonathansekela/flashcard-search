@@ -1,4 +1,4 @@
-# flashcard-search 0.3.5
+# flashcard-search 0.4.0
 ## Client-side flashcard search web-app
 ### Purpose: convenient EF SSA-SSC flashcard search tool
 
@@ -16,6 +16,7 @@ This app will help EF teachers more easily find cards for classes based on card 
 5. reset button
 
 #### change-log
+- 2018/07/13: changed js to functional instead of object-oriented for simplicity's sake; added A LOT of console.log
 - 2018/06/29: added setter functions and EcmaScript syntax, changed the class layout
 - 2018/06/28: added search form to index.html
 	- Current options: class, unit, lesson

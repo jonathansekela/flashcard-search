@@ -13,7 +13,8 @@
 	<!-- Bootstrap js -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<!-- utility and index js -->
-	<script type="text/javascript" src="js/FlashcardDatabaseClass.js"></script>
+	<script type="text/javascript" src="js/FlashCardDatabaseFunctions.js"></script>
+	<!-- <script type="text/javascript" src="js/FlashcardDatabaseClass.js"></script> -->
 	<script type="text/javascript" src="js/utility.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
@@ -32,7 +33,7 @@
 				<!-- class select -->
 				<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 						<label for="class">Class</label>
-						<select class="form-control" id="class">
+						<select class="form-control" id="class" name="class">
 							<option>SSA</option>
 							<option>SSB</option>
 							<option>SSC</option>
@@ -41,7 +42,7 @@
 				<!-- unit select -->
 				<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 						<label for="unit">Unit</label>
-						<select class="form-control" id="unit">
+						<select class="form-control" id="unit" name="unit">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -55,7 +56,7 @@
 				<!-- lesson select -->
 				<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
 						<label for="lesson">Lesson</label>
-						<select class="form-control" id="lesson">
+						<select class="form-control" id="lesson" name="lesson">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -67,7 +68,7 @@
 						</select>
 				</div>
 
-				<button class="btn btn-primary" onclick="SmallStarsFCs.search()">Submit</button>
+				<button class="btn btn-primary" onclick="displayTable(search(), $('#card-display'));">Submit</button>
 			</form>
 		</div>
 		<!-- card display -->
