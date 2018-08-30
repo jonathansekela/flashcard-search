@@ -1,4 +1,4 @@
-# flashcard-search 0.4.1
+# flashcard-search 0.4.2
 ## Client-side flashcard search web-app
 ### Purpose: convenient EF SSA-SSC flashcard search tool
 
