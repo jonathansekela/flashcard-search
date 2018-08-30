@@ -16,7 +16,7 @@ This app will help EF teachers more easily find cards for classes based on card 
 5. [ ] reset button
 
 #### change-log
-- 2018/08/30: fixed displayTable while infinite loop problem; table now displays below search section. Table-specific CSS needed for increased legibility.
+- 2018/08/30: fixed displayTable while infinite loop problem; table now displays below search section. inline CSS added to created table.
    - Note: the table itself is not finished yet; more research into the FC system is needed to complete it.
 - 2018/07/13: changed js to functional instead of object-oriented for simplicity's sake; added A LOT of console.log
    - CURRENT PROBLEM: there seems to be an infinite loop in either displayTable or one of the FlashCardDatabaseFunctions.js functions.

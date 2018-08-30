@@ -1,7 +1,7 @@
 /**********************************************************
 
 Jonathan Sekela
-Last Edit: 2018/04/25
+Last Edit: 2018/08/30
 Shenzhen 12 Flashcard search database
 
 Library dependencies:
@@ -28,24 +28,36 @@ function initialDisplay() {
 // POSTCONDITION: htmlLoc contains a formatted table of
 //  data's contents
 function displayTable(data, htmlLoc = $("#card-display")) {
-    var result = "<table>";
+    var result = "<table class='table table-striped table-hover'>";
     let i = 0;
+    result += "<tr>";
+
+    // Create header for table
+    while (!isnewline(data[i])) {
+        result += "<th>";
+        while (data[i] !== ',' && !isnewline(data[i])) {
+            result += data[i++];
+        }
+        result += "</th>";
+        if (data[i] === ',') i++;
+    }
+
+    // continue with the rest of the table
     while (i < data.length) {
-
         result += "<tr>";
-        while (i < data.length && !isnewline(data[i])) {
 
+        while (i < data.length && !isnewline(data[i])) {
             result += "<td>";
+
             while (i < data.length
                 && data[i] !== ','
                 && !isnewline(data[i])) { // create table columns until comma or end of file
+                result += data[i++]; // add to result, increment i
+            }
 
-                result += (data[i++]); // add to result, increment i
-            }
             result += "</td>"; // move onto next column
-            if (i < data.length && data[i] === ',') {
-                i++; // ignore comma
-            }
+            if (i < data.length && data[i] === ',') i++; // ignore comma
+
         }
         result += "</tr>"; // move onto next row
         i++; // add 1 to i every newline
