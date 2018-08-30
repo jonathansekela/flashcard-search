@@ -8,8 +8,8 @@ This app will help EF teachers more easily find cards for classes based on card 
 1. [x] Read .csv file
 2. [ ] Separate into searchable array
 3. [ ] Search form
-    * [x] by class: SSA-SSC
-    * [x] by unit: 1-8
+    * [ ] by class: SSA-SSC
+    * [ ] by unit: 1-8
     * [ ] by lesson: 1-8
        * _will require tedious amounts of digging through the teacher notes..._
 4. [x] Results In a table, easily read
