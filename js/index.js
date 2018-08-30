@@ -18,7 +18,6 @@ $(document).ready(initialDisplay());
 // POSTCONDITION: #db div contains formatted table of all
 //  EF flashcards sorted by card number
 function initialDisplay() {
-    console.log("initial display called...");
     fileToString(displayTable);
 }
 //=======
@@ -32,21 +31,27 @@ function displayTable(data, htmlLoc = $("#card-display")) {
     var result = "<table>";
     let i = 0;
     while (i < data.length) {
+
         result += "<tr>";
-        while (!isnewline(data[i])) {
+        while (i < data.length && !isnewline(data[i])) {
+
             result += "<td>";
-            while (data[i] !== ','
-                && !isnewline(data[i])) { // create table columns until comma
+            while (i < data.length
+                && data[i] !== ','
+                && !isnewline(data[i])) { // create table columns until comma or end of file
+
                 result += (data[i++]); // add to result, increment i
             }
-
-            result += "</td>";
-            if (data[i] === ',')
+            result += "</td>"; // move onto next column
+            if (i < data.length && data[i] === ',') {
                 i++; // ignore comma
+            }
         }
         result += "</tr>"; // move onto next row
         i++; // add 1 to i every newline
+
     }
     result += "</table>";
-    htmlLoc.html(result);
+    // htmlLoc.html(result);
+    $("#card-display").html(result);
 }
