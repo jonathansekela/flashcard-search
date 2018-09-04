@@ -1,12 +1,13 @@
 /**********************************************************
 
 Jonathan Sekela
-Last Edit: 2018/08/30
+Last Edit: 2018/09/04
 Shenzhen 12 Flashcard search database
 
 Library dependencies:
 > jQuery
-> FlashcardDatabaseClass.js
+> FlashCardDatabaseFunctions.js
+> Bootstrap CSS
 
 **********************************************************/
 
@@ -64,6 +65,6 @@ function displayTable(data, htmlLoc = $("#card-display")) {
 
     }
     result += "</table>";
-    // htmlLoc.html(result);
-    $("#card-display").html(result);
+    htmlLoc.html(result);
+    // $("#card-display").html(result);
 }

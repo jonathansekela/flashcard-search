@@ -9,15 +9,14 @@ Library dependencies:
 ***********************/
 
 
-var csvLoc = "docs/ef-fc-db-stringReadable.csv";
+// CSV file location
+var CSV_LOCATION = "docs/ef-fc-db-stringReadable.csv";
+
 var fileToString = (callback) => {
-	console.log("fileToString called. generating AJAX request...");
     $.get({
-        url: csvLoc,
+        url: CSV_LOCATION,
         dataType: "text",
         success: function(result) {
-        	console.log("AJAX request successful. result: ");
-        	console.log(result);
         	callback(result);
         },
         failure: function(xhr, status, error) {
@@ -48,7 +47,7 @@ var stringToArray = () => {
 
 var fileToArray = () => {
 	console.log("fileToArray called...");
-	stringToArray(fileToString(csvLoc));
+	stringToArray(fileToString(CSV_LOCATION));
 }
 // =======
 
