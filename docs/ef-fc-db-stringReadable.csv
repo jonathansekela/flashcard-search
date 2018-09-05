@@ -49,9 +49,9 @@
 48,ssa,3,ball
 49,ssa,3,boat
 50,ssa,3,toy
-51,ssa,3,
-52,ssa,3,
-53,ssa,3,
+51,ssa,3,drive
+52,ssa,3,draw
+53,ssa,3,go
 54,ssa,4,cat
 55,ssa,4,dog
 56,ssa,4,cow
@@ -314,3 +314,141 @@
 313,ssb,8,cute
 314,ssb,8,cub
 315,ssb,8,cube
+316,ssc,1,playground
+317,ssc,1,bathroom
+318,ssc,1,cafeteria
+319,ssc,1,gym
+320,ssc,1,study
+321,ssc,1,above
+322,ssc,1,in front of
+323,ssc,1,behind
+324,ssc,1,next to
+325,ssc,1,in between
+326,ssc,1,where
+327,ssc,1,whistle
+328,ssc,1,wheel
+329,ssc,2,aunt
+330,ssc,2,uncle
+331,ssc,2,cousin
+332,ssc,2,great grandmother
+333,ssc,2,great grandfather
+334,ssc,2,niece
+335,ssc,2,nephew
+336,ssc,2,who
+337,ssc,2,they
+338,ssc,2,king
+339,ssc,2,ring
+340,ssc,2,song
+341,ssc,2,wrong
+342,ssc,2,fang
+343,ssc,3,sunny
+344,ssc,3,windy
+345,ssc,3,rainy
+346,ssc,3,snowy
+347,ssc,3,cloudy
+348,ssc,3,hot
+349,ssc,3,cold
+350,ssc,3,wet
+351,ssc,3,sun
+352,ssc,3,sky
+353,ssc,3,cloud
+354,ssc,3,jacket
+355,ssc,3,coat
+356,ssc,3,scarf
+357,ssc,3,gloves
+358,ssc,3,boots
+359,ssc,3,umbrella
+360,ssc,3,swimsuit
+361,ssc,3,sunglasses
+362,ssc,3,sweater
+363,ssc,3,phone
+364,ssc,3,graph
+365,ssc,3,laugh
+366,ssc,3,cough
+367,ssc,4,shark
+368,ssc,4,whale
+369,ssc,4,dolphin
+370,ssc,4,squid
+371,ssc,4,seahorse
+372,ssc,4,turtle
+373,ssc,4,starfish
+374,ssc,4,shell
+375,ssc,4,octopus
+376,ssc,4,long
+377,ssc,4,beautiful
+378,ssc,4,ugly
+379,ssc,4,safe
+380,ssc,4,dangerous
+381,ssc,4,ship
+382,ssc,4,show
+383,ssc,4,shut
+384,ssc,4,shy
+385,ssc,5,thirteen
+386,ssc,5,fourteen
+387,ssc,5,fifteen
+388,ssc,5,sixteen
+389,ssc,5,seventeen
+390,ssc,5,eighteen
+391,ssc,5,nineteen
+392,ssc,5,twenty
+393,ssc,5,shop
+394,ssc,5,shop assistant
+395,ssc,5,dollar
+396,ssc,5,sea
+397,ssc,5,bee
+398,ssc,5,clean
+399,ssc,5,key
+400,ssc,5,we
+401,ssc,6,milk
+402,ssc,6,tea
+403,ssc,6,coffee
+404,ssc,6,juice
+405,ssc,6,milkshake
+406,ssc,6,hot cocoa
+407,ssc,6,iced tea
+408,ssc,6,cola
+409,ssc,6,thirsty
+410,ssc,6,bottle
+411,ssc,6,cup
+412,ssc,6,mug
+413,ssc,6,glass
+414,ssc,6,drink
+415,ssc,6,cheese
+416,ssc,6,chip
+417,ssc,6,torch/flashlight
+418,ssc,6,punch
+419,ssc,6,chip
+420,ssc,6,chain
+421,ssc,7,bedroom
+422,ssc,7,living room
+423,ssc,7,dining room
+424,ssc,7,kitchen
+425,ssc,7,garage
+426,ssc,7,garden
+427,ssc,7,house
+428,ssc,7,toilet
+429,ssc,7,shower
+430,ssc,7,sink
+431,ssc,7,stove
+432,ssc,7,clothes
+433,ssc,7,bookcase
+434,ssc,7,spoon
+435,ssc,7,moon
+436,ssc,7,boom
+437,ssc,7,foot
+438,ssc,8,soccer
+439,ssc,8,baseball
+440,ssc,8,table tennis
+441,ssc,8,badminton
+442,ssc,8,ice skating
+443,ssc,8,rollerblading
+444,ssc,8,volleyball
+445,ssc,8,riding a horse
+446,ssc,8,riding a bike
+447,ssc,8,quickly
+448,ssc,8,slowly
+449,ssc,8,well
+450,ssc,8,badly
+451,ssc,8,think
+452,ssc,8,throw
+453,ssc,8,thick
