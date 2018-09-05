@@ -1,4 +1,4 @@
-# flashcard-search 0.4.3
+# flashcard-search 1.0.0
 ## Client-side flashcard search web-app
 ### Purpose: convenient EF SSA-SSC flashcard search tool
 
@@ -16,7 +16,7 @@ This app will help EF teachers more easily find cards for classes based on card 
 5. [ ] reset button
 
 #### change-log
-- 2018/09/05: finished ef-fc-db and ef-fc-db-stringReadable. The page still works with all 453 flashcards.
+- 2018/09/05: finished ef-fc-db and ef-fc-db-stringReadable. The page still works with all 453 flashcards. It now works when using the Find function on desktop!
 - 2018/09/04: eliminated some console.log(), cleaned up some AJAX code, deleted FlashcardDatabaseClass.js
 - 2018/08/30: fixed displayTable while infinite loop problem; table now displays below search section. inline CSS added to created table.
    - Note: the table itself is not finished yet; more research into the FC system is needed to complete it.
