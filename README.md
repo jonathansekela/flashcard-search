@@ -1,8 +1,10 @@
-# flashcard-search 1.0.0: Beta Version
+# flashcard-search Beta 1.0.0
 ## Client-side flashcard search web-app
-### Purpose: convenient EF SSA-SSC flashcard search tool
+### Purpose: convenient EF SSA-SSC 2.0 flashcard search tool
 
 This app will help EF teachers more easily find cards for classes based on card name, number, class, and unit.
+
+Currently requires in-browser "find" function to work properly.
 
 ### Workflow:
 1. [x] Read .csv file
