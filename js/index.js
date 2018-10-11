@@ -1,15 +1,15 @@
 /**********************************************************
 
-Jonathan Sekela
-Last Edit: 2018/09/04
-Shenzhen 12 Flashcard search database
+ Jonathan Sekela
+ Last Edit: 2018/09/04
+ Shenzhen 12 Flashcard search database
 
-Library dependencies:
-> jQuery
-> FlashCardDatabaseFunctions.js
-> Bootstrap CSS
+ Library dependencies:
+ > jQuery
+ > FlashCardDatabaseFunctions.js
+ > Bootstrap CSS
 
-**********************************************************/
+ **********************************************************/
 
 $(document).ready(initialDisplay());
 //===============================================
@@ -21,6 +21,7 @@ $(document).ready(initialDisplay());
 function initialDisplay() {
     fileToString(displayTable);
 }
+
 //=======
 
 // DESC: Function to display table in designated html tag
@@ -51,8 +52,8 @@ function displayTable(data, htmlLoc = $("#card-display")) {
             result += "<td>";
 
             while (i < data.length
-                && data[i] !== ','
-                && !isnewline(data[i])) { // create table columns until comma or end of file
+            && data[i] !== ','
+            && !isnewline(data[i])) { // create table columns until comma or end of file
                 result += data[i++]; // add to result, increment i
             }
 

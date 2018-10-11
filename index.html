@@ -1,88 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>EF SZ12 Flashcard Search</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Jonathan Sekela">
+    <title>EF SZ12 Flashcard Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonathan Sekela">
 
-	<!-- Bootstrap css -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!-- jQuery -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<!-- Bootstrap js -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<!-- utility and index js -->
-	<script type="text/javascript" src="js/FlashCardDatabaseFunctions.js"></script>
-	<script type="text/javascript" src="js/utility.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!-- utility and index js -->
+    <script type="text/javascript" src="js/FlashCardDatabaseFunctions.js"></script>
+    <script type="text/javascript" src="js/utility.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-	<div class="container">
-		<!-- jumbotron -->
-		<div class="row">
-			<div class="jumbotron">
-				<h1>Welcome!</h1>
-				<p>EF SZ12 FC Search</p>
-			</div>
-		</div>
-		<div class="row">
-			<p>The search function does not work right now. Please use the in-browser find function through ctrl+f or, if on mac, cmd+f to find what flashcard you need. Thank you for using flashcard-search!</p>
-		</div>
-		<!-- search form -->
-		<div class="row">
-			<form>
-				<!-- class select -->
-				<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-						<label for="class">Class</label>
-						<select class="form-control" id="class" name="class">
-							<option>SSA</option>
-							<option>SSB</option>
-							<option>SSC</option>
-						</select>
-				</div>
-				<!-- unit select -->
-				<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-						<label for="unit">Unit</label>
-						<select class="form-control" id="unit" name="unit">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-						</select>
-				</div>
-				<!-- lesson select -->
-				<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-						<label for="lesson">Lesson</label>
-						<select class="form-control" id="lesson" name="lesson">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
-							<option>6</option>
-							<option>7</option>
-							<option>8</option>
-						</select>
-				</div>
+<div class="container">
+    <!-- jumbotron -->
+    <div class="row">
+        <div class="jumbotron">
+            <h1>Welcome!</h1>
+            <p>EF SZ12 FC Search</p>
+        </div>
+    </div>
+    <div class="row">
+        <p style="color: red;">The search function does not work right now. Please use the in-browser find function
+            through ctrl+f or, if on
+            mac, cmd+f to find what flashcard you need. Thank you for using flashcard-search!</p>
+    </div>
+    <!-- search form -->
+    <div class="row">
+        <form name="search-params" id="search-params">
+            <!-- class select -->
+            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <label for="class">Class</label>
+                <select class="form-control" id="class" name="class">
+                    <option>SSA</option>
+                    <option>SSB</option>
+                    <option>SSC</option>
+                </select>
+            </div>
+            <!-- unit select -->
+            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <label for="unit">Unit</label>
+                <select class="form-control" id="unit" name="unit">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </div>
+            <!-- lesson select -->
+            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <label for="lesson">Lesson</label>
+                <select class="form-control" id="lesson" name="lesson">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                </select>
+            </div>
 
-				<button class="btn btn-primary" onclick="displayTable(search(), $('#card-display'));">Submit</button>
-			</form>
-		</div>
-		<!-- card display -->
-		<div class="row">
-			<div id="db">
-				<div class="col-xs-12">
-					<div id="card-display">
-						
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <button class="btn btn-primary" onclick="displayTable(search(this), $('#card-display'))">
+                Submit
+            </button>
+        </form>
+    </div>
+    <!-- card display -->
+    <div class="row">
+        <div id="db">
+            <div class="col-xs-12">
+                <div id="card-display">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
