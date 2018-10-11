@@ -44,6 +44,7 @@ const stringToArray = (cardString) => {
 
 const fileToArray = () => {
     console.log("fileToArray called...");
+    // @TODO: stringToArray doesn't get called here - figure out why
     return fileToString(stringToArray);
 };
 // =======
