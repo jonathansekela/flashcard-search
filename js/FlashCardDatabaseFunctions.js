@@ -7,13 +7,10 @@
  > jQuery
 
  ***********************/
-
-
-// CSV file location
-var CSV_LOCATION = "docs/ef-fc-db-stringReadable.csv";
+const CSV_LOCATION = "docs/ef-fc-db-stringReadable.csv";
 
 // jQuery call to get csv file in docs
-var fileToString = (callback) => {
+const fileToString = (callback) => {
     $.get({
         url: CSV_LOCATION,
         dataType: "text",
@@ -30,12 +27,12 @@ var fileToString = (callback) => {
 
 // PRECONDITION:  csv is an appropriately-constructed string
 // POSTCONDITION: result is a 2D array parsed by '\n' and ','
-var stringToArray = (cardString) => {
+const stringToArray = (cardString) => {
     console.log("stringToArray called. splitting cardString by newline...");
-    var csvLines = cardString.split("\n");
+    let csvLines = cardString.split("\n");
     console.log("split successful. generating array...");
-    var result = [];
-    for (var i = 0; i < csvLines.length; i++) {
+    let result = [];
+    for (let i = 0; i < csvLines.length; i++) {
         console.log("for loop iteration " + i + "...");
         // [0][0] is number [0][1] is class, [0][2] is unit, [0][3] is lesson
         result[i] = csvLines[i].split(",");
@@ -45,16 +42,17 @@ var stringToArray = (cardString) => {
 };
 // =======
 
-var fileToArray = () => {
+const fileToArray = () => {
     console.log("fileToArray called...");
     return fileToString(stringToArray);
 };
 // =======
 
-var libraryArrayToString = (lib) => {
+const libraryArrayToString = (lib) => {
     console.log("libraryArrayToString called...");
-    var result = "";
-    for (var i = 0; i < lib.length; i++) {
+    let result = "";
+    let row;
+    for (let i = 0; i < lib.length; i++) {
         console.log("for loop iteration" + i + 1 + "...");
         row = lib[i++];
         console.log("adding \"" + row[0] + "," + row[1] + "," + row[2] + "," + row[3] + "\\n\"...");
@@ -68,15 +66,14 @@ var libraryArrayToString = (lib) => {
 // PRECONDITION: form is #search-params in index.js
 //  > lib is the result of fileToArray()
 // POSTCONDITION: result is a csv-format string to be passed to displayTable() in index.js
-var search = (form, lib) => {
+const search = (form, lib) => {
     console.log("search called...");
 
     console.log(lib.length + " is lib's length.");
 
-    var result = "";
-    var resultLength = 0;
+    let result = "";
     console.log("search nested for loop called...");
-    for (var i = 0; i < lib.length; i++) {
+    for (let i = 0; i < lib.length; i++) {
         // check class
         console.log("checking class " + form.class.value + "...");
         if (lib[i][1] === form.class.value) {

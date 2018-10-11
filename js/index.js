@@ -1,7 +1,7 @@
 /**********************************************************
 
  Jonathan Sekela
- Last Edit: 2018/09/04
+ Last Edit: 2018/10/11
  Shenzhen 12 Flashcard search database
 
  Library dependencies:
@@ -18,9 +18,9 @@ $(document).ready(initialDisplay());
 // PRECONDITION:  html page is properly setup and started
 // POSTCONDITION: #db div contains formatted table of all
 //  EF flashcards sorted by card number
-function initialDisplay() {
+const initialDisplay = () => {
     fileToString(displayTable);
-}
+};
 
 //=======
 
@@ -29,8 +29,8 @@ function initialDisplay() {
 //                htmlLoc is a valid jQuery location on the current page
 // POSTCONDITION: htmlLoc contains a formatted table of
 //  data's contents
-function displayTable(data, htmlLoc = $("#card-display")) {
-    var result = "<table class='table table-striped table-hover'>";
+const displayTable = (data, htmlLoc = $("#card-display")) => {
+    let result = "<table class='table table-striped table-hover'>";
     let i = 0;
     result += "<tr>";
 
@@ -67,5 +67,4 @@ function displayTable(data, htmlLoc = $("#card-display")) {
     }
     result += "</table>";
     htmlLoc.html(result);
-    // $("#card-display").html(result);
-}
+};
