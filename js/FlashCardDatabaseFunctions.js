@@ -18,7 +18,7 @@ var fileToString = (callback) => {
         url: CSV_LOCATION,
         dataType: "text",
         success: function (result) {
-            return callback(result);
+            callback(result);
         },
         failure: function (xhr, status, error) {
             console.log("ERROR: fileToString(): " + xhr + " ||| " + status + " ||| " + error);
@@ -47,7 +47,7 @@ var stringToArray = (cardString) => {
 
 var fileToArray = () => {
     console.log("fileToArray called...");
-    return fileToString(stringToArray());
+    return fileToString(stringToArray);
 };
 // =======
 
@@ -66,10 +66,13 @@ var libraryArrayToString = (lib) => {
 
 // @TODO: add lesson and word checking capability
 // PRECONDITION: form is #search-params in index.js
-// POSTCONDITION: result is a csv-format string to be passed to displaytable() in index.js
-var search = (form) => {
+//  > lib is the result of fileToArray()
+// POSTCONDITION: result is a csv-format string to be passed to displayTable() in index.js
+var search = (form, lib) => {
     console.log("search called...");
-    var lib = fileToArray();
+
+    console.log(lib.length + " is lib's length.");
+
     var result = "";
     var resultLength = 0;
     console.log("search nested for loop called...");
@@ -81,10 +84,11 @@ var search = (form) => {
             console.log("checking unit " + form.unit.value + "...");
             if (Number(lib[i][2]) === Number(form.unit.value)) {
                 console.log("adding to result...");
-                result += lib[i] + ",";
+                result += lib[i] + "\n";
             }
         }
     }
-    console.log("search success! returning result...");
+    console.log("search success! result: " + result.length + " characters");
+    console.log(result);
     return result;
 };

@@ -76,13 +76,11 @@
                 </select>
             </div>
 
-            <button class="btn btn-primary" onclick="displayTable(search(this), $('#card-display'))">
+            <button class="btn btn-primary" onclick="displayTable(search(this, fileToArray), $('#card-display'))">
                 Submit
             </button>
         </form>
-    </div>
-    <!-- card display -->
-    <div class="row">
+
         <div id="db">
             <div class="col-xs-12">
                 <div id="card-display">
@@ -91,6 +89,7 @@
             </div>
         </div>
     </div>
+
 </div>
 </body>
 </html>

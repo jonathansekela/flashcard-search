@@ -36,7 +36,7 @@ function CSVfileToString(file) {
 function CSVstringToArray(csv) {
     // @TODO: add error-checking for 2D
     var csvLines = csv.split("\n");
-    var result = new Array();
+    var result = [];
     for (var i = 0; i < csvLines.length; i++) {
         result[i] = csvLines[i].split(",");
     }
