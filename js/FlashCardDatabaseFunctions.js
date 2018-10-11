@@ -16,6 +16,7 @@ const fileToString = (callback) => {
         dataType: "text",
         success: function (result) {
             callback(result);
+            return result;
         },
         failure: function (xhr, status, error) {
             console.log("ERROR: fileToString(): " + xhr + " ||| " + status + " ||| " + error);
@@ -45,7 +46,8 @@ const stringToArray = (cardString) => {
 const fileToArray = () => {
     console.log("fileToArray called...");
     // @TODO: stringToArray doesn't get called here - figure out why
-    return fileToString(stringToArray);
+    // return fileToString(stringToArray);
+    return stringToArray(fileToString);
 };
 // =======
 
