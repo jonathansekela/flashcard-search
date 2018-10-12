@@ -1,23 +1,26 @@
-# flashcard-search Beta 1.0.5
+# flashcard-search Beta 2.0.0
 ## Client-side flashcard search web-app
 ### Purpose: convenient EF SSA-SSC 2.0 flashcard search tool
 
 This app will help EF teachers more easily find cards for classes based on card name, number, class, and unit.
 
-Currently requires in-browser "find" function to work properly.
+Currently requires in-browser "find" function to search for specific words.
 
 ### Workflow:
 1. [x] Read .csv file
 2. [x] Separate into searchable array
 3. [ ] Search form
-    * [ ] by class: SSA-SSC
-    * [ ] by unit: 1-8
+    * [x] by class: SSA-SSC
+    * [x] by unit: 1-8
     * [ ] by lesson: 1-8
        * _will require tedious amounts of digging through the teacher notes..._
+    * [ ] by word: simple search bar
+      
 4. [x] Results In a table, easily read
-5. [ ] reset button
+5. [x] reset button
 
 #### change-log
+- 2018/10/12: Beta 2.0.0: Search by class and unit works now - changed html call to correct, old-style async callback pyramid
 - 2018/10/11: Began work on search() logic. fileToString(StringToArray()) causes a typeError: cardString is undefined. Currently working on solutions.
    - callback hell on index.html:79 :\(
    - deleted csv-utility.js - redundant, no longer needed

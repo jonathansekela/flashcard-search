@@ -31,9 +31,10 @@
         </div>
     </div>
     <div class="row">
-        <p style="color: red;">The search function does not work right now. Please use the in-browser find function
+        <p style="color: red;">The search function currently works for unit and lesson specification. Please use the
+            in-browser find function
             through ctrl+f or, if on
-            mac, cmd+f to find what flashcard you need. Thank you for using flashcard-search!</p>
+            mac, cmd+f to search for specific words. Thank you for using flashcard-search!</p>
     </div>
     <!-- search form -->
     <div class="row">
@@ -79,11 +80,15 @@
 
         <!--@TODO: navigate callback hell: search() needs fileToArray to return a populated array-->
         <button class="btn btn-primary"
-                onclick="displayTable(search(document.getElementById('search-params'), fileToArray), $('#card-display'))">
+                onclick="fileToArray(function(result) {
+                  search(document.getElementById('search-params'), result, function(newResult) {
+                    displayTable(newResult, $('#card-display'));
+                  });
+                });">
             Submit
         </button>
-        <button class="btn btn-primary" onclick="fileToArray();">
-            fileToArray
+        <button class="btn btn-primary" onclick="fileToString(displayTable);">
+            Reset
         </button>
 
         <div id="db">
