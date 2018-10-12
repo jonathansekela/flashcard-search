@@ -14,7 +14,6 @@
 $(document).ready(initialDisplay());
 //===============================================
 
-// DESC:
 // PRECONDITION:  html page is properly setup and started
 // POSTCONDITION: #db div contains formatted table of all
 //  EF flashcards sorted by card number
@@ -29,7 +28,7 @@ function initialDisplay() {
 //                htmlLoc is a valid jQuery location on the current page
 // POSTCONDITION: htmlLoc contains a formatted table of
 //  data's contents
-function displayTable (data, htmlLoc = $("#card-display")) {
+function displayTable(data, htmlLoc = $("#card-display")) {
     let result = "<table class='table table-striped table-hover'>";
     let i = 0;
     result += "<tr>";

@@ -75,12 +75,16 @@
                     <option>8</option>
                 </select>
             </div>
-
-            <!--@TODO: navigate callback hell: search() needs fileToArray to return a populated array-->
-            <button class="btn btn-primary" onclick="displayTable(search(this, fileToArray), $('#card-display'))">
-                Submit
-            </button>
         </form>
+
+        <!--@TODO: navigate callback hell: search() needs fileToArray to return a populated array-->
+        <button class="btn btn-primary"
+                onclick="displayTable(search(document.getElementById('search-params'), fileToArray), $('#card-display'))">
+            Submit
+        </button>
+        <button class="btn btn-primary" onclick="fileToArray();">
+            fileToArray
+        </button>
 
         <div id="db">
             <div class="col-xs-12">

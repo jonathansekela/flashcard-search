@@ -9,7 +9,7 @@
  ***********************/
 const CSV_LOCATION = "docs/ef-fc-db-stringReadable.csv";
 
-// jQuery call to get csv file in docs
+// jQuery call to get csv file in docs folder
 const fileToString = (callback) => {
     $.get({
         url: CSV_LOCATION,
@@ -43,10 +43,36 @@ const stringToArray = (cardString) => {
 };
 // =======
 
+// literally just combine fileToString() and stringToArray()
 const fileToArray = () => {
-    console.log("fileToArray called...");
-    // return fileToString(stringToArray);
-    return stringToArray(fileToString);
+    console.log("fileToArray started.");
+    $.get({
+        url: CSV_LOCATION,
+        dataType: "text",
+        success: function (result) {
+            console.log("splitting result by newline...");
+            let csvLines = result.split("\n");
+            console.log("split successful. generating array into retval ...");
+            let retval = [];
+            for (let i = 0; i < csvLines.length; i++) {
+                // [0][0] is number [0][1] is class, [0][2] is unit, [0][3] is lesson
+                retval[i] = csvLines[i].split(",");
+            }
+            console.log("success! Returning retval.");
+            return retval;
+
+            // callback(result);
+            // return result;
+        },
+        failure: function (xhr, status, error) {
+            console.log("ERROR: fileToString(): " + xhr + " ||| " + status + " ||| " + error);
+            alert("ERROR: fileToString(): " + xhr + " ||| " + status + " ||| " + error);
+        }
+    })
+
+    // console.log("fileToArray called...");
+    // // return fileToString(stringToArray);
+    // return stringToArray(fileToString);
 };
 // =======
 

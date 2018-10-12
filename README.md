@@ -21,6 +21,8 @@ Currently requires in-browser "find" function to work properly.
 - 2018/10/11: Began work on search() logic. fileToString(StringToArray()) causes a typeError: cardString is undefined. Currently working on solutions.
    - callback hell on index.html:79 :\(
    - deleted csv-utility.js - redundant, no longer needed
+   - combined fileToString and stringToArray code into fileToArray
+   - fixed button locations to outside of form element (prevents page refresh)
 - 2018/09/05: finished ef-fc-db and ef-fc-db-stringReadable. The page still works with all 453 flashcards. It now works when using the Find function on desktop!
 - 2018/09/04: eliminated some console.log(), cleaned up some AJAX code, deleted FlashcardDatabaseClass.js
 - 2018/08/30: fixed displayTable while infinite loop problem; table now displays below search section. inline CSS added to created table.
