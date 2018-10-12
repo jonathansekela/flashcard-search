@@ -27,7 +27,6 @@ const fileToString = (callback) => {
 // =======
 
 const fileToArray = (callback) => {
-    // console.log("fileToArray started.");
     $.get({
         url: CSV_LOCATION,
         dataType: "text",
@@ -66,6 +65,5 @@ const search = (form, lib, callback) => {
             }
         }
     }
-    console.log(result);
     callback(result);
 };
