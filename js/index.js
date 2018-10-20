@@ -19,7 +19,7 @@ $(document).ready(initialDisplay());
 //  EF flashcards sorted by card number
 function initialDisplay() {
     fileToString(displayTable);
-};
+}
 
 //=======
 
@@ -48,7 +48,7 @@ function displayTable(data, htmlLoc = $("#card-display")) {
         result += "<tr>";
 
         while (i < data.length && !isnewline(data[i])) {
-            result += "<td>";
+            result += "<td onclick='toggleCross(this);'>";
 
             while (i < data.length
             && data[i] !== ','
@@ -66,4 +66,13 @@ function displayTable(data, htmlLoc = $("#card-display")) {
     }
     result += "</table>";
     htmlLoc.html(result);
-};
+}
+
+// @TODO: make line-through work correctly
+function toggleCross(elem) {
+    if (elem.classList.contains('cross')) {
+        elem.classList.remove('cross');
+    } else {
+        elem.classList.add('cross');
+    }
+}

@@ -1,4 +1,4 @@
-# flashcard-search Beta 2.0.0
+# flashcard-search Beta 2.1.0
 ## Client-side flashcard search web-app
 ### Purpose: convenient EF SSA-SSC 2.0 flashcard search tool
 
@@ -12,14 +12,16 @@ Currently requires in-browser "find" function to search for specific words.
 3. [ ] Search form
     * [x] by class: SSA-SSC
     * [x] by unit: 1-8
-    * [ ] by lesson: 1-8
-       * _will require tedious amounts of digging through the teacher notes..._
+    * [ ] by lesson: 1-8 _(will require tedious amounts of digging through the teacher notes...)_
     * [ ] by word: simple search bar
-      
 4. [x] Results In a table, easily read
+    * [ ] table doubles as checklist
 5. [x] reset button
 
 #### change-log
+- 2018/10/20: began adding search by word functionality and checklist functionality
+   - js: fix searchByWord so it finds the word in lib
+   - css & js: make line-through class work correctly when table row clicked
 - 2018/10/12: Beta 2.0.0: Search by class and unit works now - changed html call to correct, old-style async callback pyramid
 - 2018/10/11: Began work on search() logic. fileToString(StringToArray()) causes a typeError: cardString is undefined. Currently working on solutions.
    - callback hell on index.html:79 :\(

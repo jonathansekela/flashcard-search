@@ -1,8 +1,13 @@
 table {
-	border-collapse: collapse;
-	border: 1px solid black;
+    border-collapse: collapse;
+    border: 1px solid black;
 }
 
 th, td {
-	border: 1px solid black;
+    border: 1px solid black;
+}
+
+/* @TODO: make line-through work correctly */
+.cross {
+    text-decoration: line-through;
 }

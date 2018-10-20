@@ -46,6 +46,7 @@
                     <option>SSA</option>
                     <option>SSB</option>
                     <option>SSC</option>
+                    <option>Alphabet</option>
                 </select>
             </div>
             <!-- unit select -->
@@ -78,15 +79,35 @@
             </div>
         </form>
 
-        <!--@TODO: navigate callback hell: search() needs fileToArray to return a populated array-->
+        <!-- class/unit/lesson search button -->
         <button class="btn btn-primary"
                 onclick="fileToArray(function(result) {
-                  search(document.getElementById('search-params'), result, function(newResult) {
+                  searchByClassUnitLesson(document.getElementById('search-params'), result, function(newResult) {
                     displayTable(newResult, $('#card-display'));
                   });
                 });">
-            Submit
+            Search by Class, Unit, and Lesson
         </button>
+
+        <!-- word select -->
+        <form name="word-form" id="word-form">
+            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <label for="word">Search for a specific word!</label>
+                <input type="text" class="form-control" id="word" name="word">
+            </div>
+        </form>
+
+        <!-- word search button -->
+        <button class="btn btn-primary"
+                onclick="fileToArray(function(result) {
+                          searchByWord(document.getElementById('word'), result, function(newResult) {
+                            displayTable(newResult, $('#card-display'));
+                          });
+                        });">
+            Search by Word
+        </button>
+
+        <!-- reset button -->
         <button class="btn btn-primary" onclick="fileToString(displayTable);">
             Reset
         </button>
@@ -98,6 +119,11 @@
                 </div>
             </div>
         </div>
+
+        <!--Reset button again-->
+        <button class="btn btn-primary" onclick="fileToString(displayTable);">
+            Reset
+        </button>
     </div>
 
 </div>
