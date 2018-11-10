@@ -8,6 +8,6 @@ th, td {
 }
 
 /* @TODO: make line-through work correctly */
-.cross {
+.checked {
     text-decoration: line-through;
 }

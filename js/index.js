@@ -1,7 +1,7 @@
 /**********************************************************
 
  Jonathan Sekela
- Last Edit: 2018/10/11
+ Last Edit: 2018/10/21
  Shenzhen 12 Flashcard search database
 
  Library dependencies:
@@ -11,7 +11,15 @@
 
  **********************************************************/
 
-$(document).ready(initialDisplay());
+$(document).ready(function () {
+    initialDisplay();
+
+    // @TODO: make line-through work correctly
+    $("td").click(function () {
+        $(this).toggleClass("cross");
+    });
+});
+
 //===============================================
 
 // PRECONDITION:  html page is properly setup and started
@@ -48,7 +56,7 @@ function displayTable(data, htmlLoc = $("#card-display")) {
         result += "<tr>";
 
         while (i < data.length && !isnewline(data[i])) {
-            result += "<td onclick='toggleCross(this);'>";
+            result += "<td>";
 
             while (i < data.length
             && data[i] !== ','
@@ -69,10 +77,10 @@ function displayTable(data, htmlLoc = $("#card-display")) {
 }
 
 // @TODO: make line-through work correctly
-function toggleCross(elem) {
-    if (elem.classList.contains('cross')) {
-        elem.classList.remove('cross');
-    } else {
-        elem.classList.add('cross');
-    }
-}
+// function toggleCross(elem) {
+//     if (elem.classList.contains('checked')) {
+//         elem.classList.remove('checked');
+//     } else {
+//         elem.classList.add('checked');
+//     }
+// }

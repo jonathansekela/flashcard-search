@@ -1,4 +1,4 @@
-# flashcard-search Beta 2.1.0
+# flashcard-search Beta 2.2.0
 ## Client-side flashcard search web-app
 ### Purpose: convenient EF SSA-SSC 2.0 flashcard search tool
 
@@ -19,6 +19,7 @@ Currently requires in-browser "find" function to search for specific words.
 5. [x] reset button
 
 #### change-log
+- 2018/11/09: added trim() function to searchByWord; it fixed the problem. Application can now search by word.
 - 2018/10/20: began adding search by word functionality and checklist functionality
    - js: fix searchByWord so it finds the word in lib
    - css & js: make line-through class work correctly when table row clicked

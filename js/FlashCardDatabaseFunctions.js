@@ -81,12 +81,10 @@ const searchByWord = (word, lib, callback) => {
     let result = "";
     result += lib[0] + "\n"; // header information
 
-    let formWord = word.value.toLowerCase();
+    let formWord = word.value.toLowerCase().trim();
     for (let i = 1; i < lib.length; i++) {
-        console.log(lib[i][3] + " vs " + formWord);
-        if (lib[i][3].toLowerCase() === formWord)
+        if (lib[i][3].toLowerCase().trim() === formWord)
             result += lib[i] + "\n";
     }
-    console.log(result);
     callback(result);
 };
