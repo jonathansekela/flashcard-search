@@ -47,7 +47,6 @@ const fileToArray = (callback) => {
 };
 // =======
 
-// @TODO: add lesson and word checking capability
 // PRECONDITION: form is #search-params in index.js
 //      > lib is the result of fileToArray()
 // POSTCONDITION: result is a csv-format string to be passed to displayTable() in index.js
@@ -76,7 +75,6 @@ const searchByClassUnitLesson = (form, lib, callback) => {
 };
 // =======
 
-// @TODO: fix searchByWord so it finds the word in lib
 const searchByWord = (word, lib, callback) => {
     let result = "";
     result += lib[0] + "\n"; // header information
