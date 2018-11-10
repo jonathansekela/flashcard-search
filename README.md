@@ -9,14 +9,13 @@ Currently requires in-browser "find" function to search for specific words.
 ### Workflow:
 1. [x] Read .csv file
 2. [x] Separate into searchable array
-3. [ ] Search form
+3. [x] Search form
     * [x] by class: SSA-SSC
     * [x] by unit: 1-8
-    * [ ] by lesson: 1-8 _(will require tedious amounts of digging through the teacher notes...)_
-    * [ ] by word: simple search bar
+    * [x] by word: simple search bar
 4. [x] Results In a table, easily read
-    * [ ] table doubles as checklist
 5. [x] reset button
+6. [ ] table doubles as checklist
 
 #### change-log
 - 2018/11/09: added trim() function to searchByWord; it fixed the problem. Application can now search by word.
