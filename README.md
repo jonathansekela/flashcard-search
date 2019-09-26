@@ -18,6 +18,7 @@ Currently requires in-browser "find" function to search for specific words.
 6. [ ] table doubles as checklist
 
 #### change-log
+- 2019/9/26: Added some VERY rudimentary node.js capability.
 - 2018/11/09: added trim() function to searchByWord; it fixed the problem. Application can now search by word.
 - 2018/10/20: began adding search by word functionality and checklist functionality
    - js: fix searchByWord so it finds the word in lib
