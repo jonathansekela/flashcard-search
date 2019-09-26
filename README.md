@@ -1,4 +1,4 @@
-# flashcard-search Beta 2.2.0
+# flashcard-search Beta 2.2.1
 ## Client-side flashcard search web-app
 ### Purpose: convenient EF SSA-SSC 2.0 flashcard search tool
 
