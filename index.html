@@ -1,131 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>EF SZ12 Flashcard Search</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jonathan Sekela">
+	<title>EF SZ12 Flashcard Search</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jonathan Sekela">
 
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- Bootstrap js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
-    <!-- utility and index js -->
-    <script type="text/javascript" src="js/FlashCardDatabaseFunctions.js"></script>
-    <script type="text/javascript" src="js/utility.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    
-    <link rel="stylesheet" href="./css/index.css">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<!-- Bootstrap js -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"></script>
+	<!-- utility and index js -->
+	<script type="text/javascript" src="js/FlashCardDatabaseFunctions.js"></script>
+	<script type="text/javascript" src="js/utility.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+	<link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 <div class="container">
-    <!-- jumbotron -->
-    <div class="row">
-        <div class="jumbotron">
-            <h1>Welcome!</h1>
-            <p>Jonathan Sekela's EF Small Star 2.0-Inspired ESL FC Search</p>
-        </div>
-    </div>
-    <div class="row">
-        <p style="color: red;">The search function currently works for class, unit, and word.
-            To view all ESL words, press the reset button.
-            Thank you for using flashcard-search!</p>
-    </div>
-    <!-- search form -->
-    <div class="row">
-        <form name="search-params" id="search-params">
-            <!-- class select -->
-            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                <label for="class">Class</label>
-                <select class="form-control" id="class" name="class">
-                    <option>SSA</option>
-                    <option>SSB</option>
-                    <option>SSC</option>
-                    <option>Alphabet</option>
-                </select>
-            </div>
-            <!-- unit select -->
-            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                <label for="unit">Unit</label>
-                <select class="form-control" id="unit" name="unit">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                </select>
-            </div>
-            <!-- lesson select -->
-            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                <label for="lesson">Lesson (currently unavailable)</label>
-                <select class="form-control" id="lesson" name="lesson">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                </select>
-            </div>
-        </form>
+	<!-- jumbotron -->
+	<div class="row">
+		<div class="jumbotron">
+			<h1>Welcome!</h1>
+			<p>Jonathan Sekela's EF Small Star 2.0-Inspired ESL FC Search</p>
+		</div>
+	</div>
+	<div class="row">
+		<p style="color: red;">The search function currently works for class, unit, and word.
+			To view all ESL words, press the reset button.
+			Thank you for using flashcard-search!</p>
+	</div>
+	<!-- search form -->
+	<div class="row">
+		<form name="search-params" id="search-params">
+			<!-- class select -->
+			<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<label for="class">Class</label>
+				<select class="form-control" id="class" name="class">
+					<option>SSA</option>
+					<option>SSB</option>
+					<option>SSC</option>
+					<option>Alphabet</option>
+				</select>
+			</div>
+			<!-- unit select -->
+			<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<label for="unit">Unit</label>
+				<select class="form-control" id="unit" name="unit">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+				</select>
+			</div>
+			<!-- lesson select -->
+			<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<label for="lesson">Lesson (currently unavailable)</label>
+				<select class="form-control" id="lesson" name="lesson">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+				</select>
+			</div>
+		</form>
 
-        <!-- class/unit/lesson search button -->
-        <button class="btn btn-primary"
-                onclick="fileToArray(function(result) {
-                  searchByClassUnitLesson(document.getElementById('search-params'), result, function(newResult) {
-                    displayTable(newResult, $('#card-display'));
-                  });
-                });">
-            Search by Class, Unit, and Lesson
-        </button>
+		<!-- class/unit/lesson search button -->
+		<button class="btn btn-primary"
+				onclick="fileToArray(function(result) {
+				  searchByClassUnitLesson(document.getElementById('search-params'), result, function(newResult) {
+					displayTable(newResult, $('#card-display'));
+				  });
+				});">
+			Search by Class, Unit, and Lesson
+		</button>
 
-        <!-- word select -->
-        <form name="word-form" id="word-form">
-            <div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                <label for="word">Search for a specific word!</label>
-                <input type="text" class="form-control" id="word" name="word">
-            </div>
-        </form>
+		<!-- word select -->
+		<form name="word-form" id="word-form">
+			<div class="form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+				<label for="word">Search for a specific word!</label>
+				<input type="text" class="form-control" id="word" name="word">
+			</div>
+		</form>
 
-        <!-- word search button -->
-        <button class="btn btn-primary"
-                onclick="fileToArray(function(result) {
-                          searchByWord(document.getElementById('word'), result, function(newResult) {
-                            displayTable(newResult, $('#card-display'));
-                          });
-                        });">
-            Search by Word
-        </button>
+		<!-- word search button -->
+		<button class="btn btn-primary"
+				onclick="fileToArray(function(result) {
+						  searchByWord(document.getElementById('word'), result, function(newResult) {
+							displayTable(newResult, $('#card-display'));
+						  });
+						});">
+			Search by Word
+		</button>
 
-        <!-- reset button -->
-        <button class="btn btn-primary" onclick="fileToString(displayTable);">
-            Reset
-        </button>
+		<!-- reset button -->
+		<button class="btn btn-primary" onclick="fileToString(displayTable);">
+			Reset
+		</button>
 
-        <div id="db">
-            <div class="col-xs-12">
-                <div id="card-display">
+		<div id="db">
+			<div class="col-xs-12">
+				<div id="card-display">
 
-                </div>
-            </div>
-        </div>
+				</div>
+			</div>
+		</div>
 
-        <!--Reset button again-->
-        <button class="btn btn-primary" onclick="fileToString(displayTable);">
-            Reset
-        </button>
-    </div>
+		<!--Reset button again-->
+		<button class="btn btn-primary" onclick="fileToString(displayTable);">
+			Reset
+		</button>
+	</div>
 
 </div>
 </body>
